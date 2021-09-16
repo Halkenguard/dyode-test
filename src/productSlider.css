@@ -1,0 +1,22 @@
+.product-slider-container {
+    margin: 0 auto;
+}
+
+.product-slider-title {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.product-slider-content {
+    display: table;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.prev-button .next-button {
+    display: table-cell;
+}
+
+.product-slider-slides {
+    display: table-cell;
+}

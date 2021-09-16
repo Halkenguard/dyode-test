@@ -1,0 +1,103 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #10504F;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: white;
+  height: 190px;
+}
+
+.Announcement-bar {
+  background-color: black;
+  display: flex;
+  width: 100%;
+  height: 55px;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+}
+
+.NavBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+}
+
+.Navbar-mobile-menu {
+  display: none;
+  width: 20%;
+  justify-content: center;
+}
+
+.Navbar-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 20%;
+  height: 50%;
+}
+
+.Navbar-logo img {
+  height:100%;
+}
+
+.NavBar-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 60%;
+}
+
+.Nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+.Navbar-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 20%;
+}
+
+.Navbar-icon {
+  background-color: transparent;
+  border: none;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@media screen and (max-width: 768px) {
+  .App-header {
+    height: 108px;
+  }
+  .NavBar-links {
+    display: none;
+  }
+  .Navbar-logo {
+    width: 50%;
+    height: 70%;
+    justify-content: left;
+  }
+  .Navbar-icons {
+    width: 30%;
+  }
+  .Navbar-mobile-menu {
+    display: flex;
+  }
+}

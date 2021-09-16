@@ -1,0 +1,148 @@
+.slide {
+    max-height: 638px;
+    min-height: 227px;
+    position: relative;
+    color: #10504F;
+}
+
+.slider-mobile {
+    display: none;
+}
+
+.mobile-slide {
+    padding-bottom: 20px;
+    background-color: #EFEFEF;
+}
+
+.hero-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero-image-mobile {
+    width: 100%;
+}
+
+.mobile-image-container {
+    max-height: 227px;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    width: 100%;
+}
+
+.hero-content-light {
+    color: #FFFFFF;
+}
+
+.hero-content h1 {
+    font-size: 60px;
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+    margin-block-end: 0;
+}
+
+.hero-content h3 {
+    font-size: 26px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    margin-block-start: 5px;
+}
+
+.hero-content button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.hero-content-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #10504F;
+}
+
+.hero-content-mobile h1 {
+    font-size: 26px;
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+    margin-block-end: 0;
+}
+
+.hero-content-mobile h3 {
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    margin-block-start: 5px;
+}
+
+.hero-content-mobile button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 12px;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.slick-dots {
+    position: absolute;
+    bottom: 20px;
+    display: block;
+    width: 100%;
+    padding: 10;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    }
+
+.slick-dots li button:before{
+    font-size:20px;
+    color: #fff;
+}
+
+.slick-dots li.slick-active button:before{
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .slick-dots {
+        bottom: 190px;
+    }
+    .slick-dots li button:before{
+        font-size:8px;
+        color: #fff;
+    }
+
+    .slick-dots li.slick-active button:before{
+        color: #fff;
+    }
+
+    .slider-desktop {
+        display: none;
+    }
+
+    .slider-mobile {
+        display: block;
+    }
+}
+
+
+
+
+
