@@ -1,18 +1,20 @@
+//Dependencies:
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 
 //Page components
-import HeroSlider from './HeroSlider';
-import Header from './Header';
-import ProductSlider from './ProductSlider';
+import HeroSlider from './components/HeroSlider';
+import Header from './components/Header';
+import ProductSlider from './components/ProductSlider';
+import Footer from './components/Footer';
 
 //Images
-import women from './images/women.png';
-import men from './images/men.png';
-import accessories from './images/accessories.png';
-import heroImage2 from './images/HeroImage2.png';
-import envelope from './images/envelope.svg';
+import women from './assets/women.png';
+import men from './assets/men.png';
+import accessories from './assets/accessories.png';
+import heroImage2 from './assets/HeroImage2.png';
+import envelope from './assets/envelope.svg';
 
 //Styles
 import './index.css';
@@ -65,6 +67,7 @@ ReactDOM.render(
           <button>Subscribe</button>
         </div>
       </div>
+      <Footer />
     </div>
   </React.StrictMode>,
   document.getElementById('root')

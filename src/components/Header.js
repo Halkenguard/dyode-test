@@ -1,9 +1,12 @@
-import './Header.css';
-import logo from './images/logo.svg'
-import search from './images/search.svg'
-import cart from './images/cart.svg'
-import user from './images/user.svg'
-import menu from './images/menu.svg'
+//Styles
+import './css/Header.css';
+
+//Images
+import logo from './assets/logo.svg'
+import search from './assets/search.svg'
+import cart from './assets/cart.svg'
+import user from './assets/user.svg'
+import menu from './assets/menu.svg'
 
 function Header() {
   return (

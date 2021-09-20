@@ -1,12 +1,13 @@
+//Dependencies
 import React from 'react';
 import ImageGallery from 'react-image-gallery'
 
-//Styles imports
+//Styles
 import "react-image-gallery/styles/css/image-gallery.css";
-import './ProductSlider.css'
+import './css/ProductSlider.css'
 
-//Images Imports
-import product from './images/product.png'
+//Images
+import product from './assets/product.png'
 
 export default class ProductSlider extends React.Component {
     constructor(props) {

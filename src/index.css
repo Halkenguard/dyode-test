@@ -2,7 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 .index-content {
-  display: block;
+  padding:0;
+  margin:0;
+  background-color: white;
 }
 
 .collection-list {
@@ -130,7 +132,7 @@
   margin-right: 10px;
 }
 
-.newsletter h1 {
+.newsletter-title h1 {
   color: white;
   font-weight: 400;
 }
@@ -139,6 +141,8 @@
   display: flex;
   flex-direction: row;
   max-width: 1440px;
+  margin-left: 30px;
+  margin-right: 30px;
   justify-content: center;
   align-items: center;
 }
@@ -217,6 +221,8 @@ code {
     text-align: center;
     justify-content: center;
     align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   .hero-image-still-content h1 {
     font-size: 26px;
@@ -228,6 +234,37 @@ code {
   }
   .hero-image-still-content button {
     background-color: black;
+  }
+
+  .newsletter-title {
+    flex-direction: column;
+  }
+
+  .newsletter-title img {
+    height: 20px;
+  }
+
+  .newsletter-title h1 {
+    font-size: 20px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form p{
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .newsletter-form input {
+    display: none;
+  }
+
+  .newsletter-form button {
+    padding-left: 15%;
+    padding-right: 15%;
+    margin-top: 30px;
   }
 
   h1 {

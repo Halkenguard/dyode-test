@@ -1,14 +1,15 @@
+//Dependencies
 import React from 'react';
 import ImageGallery from 'react-image-gallery'
 
-//Styles imports
+//Styles
 import "react-image-gallery/styles/css/image-gallery.css";
-import './HeroSlider.css'
+import './css/HeroSlider.css'
 
-//Images Imports
-import slide1 from './images/slide1.png'
-import slide2 from './images/slide2.png'
-import slide3 from './images/slide3.png'
+//Images
+import slide1 from './assets/slide1.png'
+import slide2 from './assets/slide2.png'
+import slide3 from './assets/slide3.png'
 
 export default class HeroSlider extends React.Component {
     constructor(props) {
