@@ -1,107 +1,114 @@
-import React, { Component } from 'react';
-import Slider from 'react-slick';
+import React from 'react';
+import ImageGallery from 'react-image-gallery'
 
-//Stlyes
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
-import './HeroSlider.css';
+//Styles imports
+import "react-image-gallery/styles/css/image-gallery.css";
+import './HeroSlider.css'
 
-//Images
+//Images Imports
 import slide1 from './images/slide1.png'
 import slide2 from './images/slide2.png'
 import slide3 from './images/slide3.png'
 
-export default class HeroSlider extends Component {
+export default class HeroSlider extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            nav1: null,
-            nav2: null
+            showIndex: false,
+            showBullets: true,
+            infinite: true,
+            showThumbnails: false,
+            showFullscreenButton: false,
+            showGalleryFullscreenButton: false,
+            showPlayButton: false,
+            showGalleryPlayButton: false,
+            showNav: false,
+            isRTL: false,
+            slideDuration: 450,
+            slideInterval: 2000,
+            slideOnThumbnailOver: false,
+            thumbnailPosition: 'bottom',
+            useWindowKeyDown: true,
         };
+
+        this.slides = [
+            {
+                renderItem: this._renderSlide1.bind(this),
+            },
+            {
+                renderItem: this._renderSlide2.bind(this),
+            },
+            {
+                renderItem: this._renderSlide3.bind(this),
+            }
+        ]
     }
 
-    componentDidMount() {
-        this.setState({
-          nav1: this.slider1,
-          nav2: this.slider2
-        });
-      }
-
-    render() {
-        const sliderSettings = {
-            dots: true,
-            infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            autoplay: true,
-            autoplaySpeed: 10000,
-        };
+    _renderSlide1(item) {
         return (
-            <div className="hero-slider">
-                <div className="slider-desktop">
-                    <Slider {...sliderSettings}>
-                        <div className="slide">
-                            <div className="hero-content">
-                                <h1>Shop New Arrivals</h1>
-                                <h3>Our coolest new items are waiting for you!</h3>
-                                <button>Shop Now</button>
-                            </div>
-                            <img className="hero-image" src={slide1} alt="slide1" />
-                        </div>
-                        <div className="slide">
-                            <div className={'hero-content hero-content-light'}>
-                                <h1>Our Fave Tees</h1>
-                                <h3>Shop all of our favorites.</h3>
-                                <button>Shop Now</button>
-                            </div>
-                            <img className="hero-image" src={slide2} alt="slide2" />
-                        </div>
-                        <div className="slide">
-                            <div className={'hero-content hero-content-light'}>
-                                <h1>Men's Tees</h1>
-                                <h3>Find the perfect shirt.</h3>
-                                <button>Shop Now</button>
-                            </div>
-                            <img className="hero-image" src={slide3} alt="slide3" />
-                        </div>
-                    </Slider>
+            <div className="slide">
+                <div className="slide-image">
+                    <img src={slide1} alt="slide1" />
                 </div>
-                <div className="slider-mobile">
-                    <Slider {...sliderSettings}>
-                        <div className="mobile-slide">
-                            <div className="mobile-image-container">
-                                <img className="hero-image-mobile" src={slide1} alt="slide1" />
-                            </div>
-                            <div className="hero-content-mobile">
-                                <h1>Shop New Arrivals</h1>
-                                <h3>Our coolest new items are waiting for you!</h3>
-                                <button>Shop Now</button>
-                            </div>
-                        </div>
-                        <div className="mobile-slide">
-                            <div className="mobile-image-container">
-                                <img className="hero-image-mobile" src={slide2} alt="slide2" />
-                            </div>
-                            <div className="hero-content-mobile">
-                                <h1>Our Fave Tees</h1>
-                                <h3>Shop all of our favorites.</h3>
-                                <button>Shop Now</button>
-                            </div>
-                        </div>
-                        <div className="mobile-slide">
-                            <div className="mobile-image-container">
-                                <img className="hero-image-mobile" src={slide3} alt="slide3" />
-                            </div>
-                            <div className="hero-content-mobile">
-                                <h1>Men's Tees</h1>
-                                <h3>Find the perfect shirt.</h3>
-                                <button>Shop Now</button>
-                            </div>
-                        </div>
-                    </Slider>
+                <div className="slide-content">
+                    <h1>Shop New Arrivals</h1>
+                    <p>Our coolest new items are waiting for you!</p>
+                    <button>Shop Now</button>
                 </div>
             </div>
         );
     }
-}
+
+    _renderSlide2(item) {
+        return (
+            <div className="slide">
+                <div className="slide-image">
+                    <img src={slide2} alt="slide2" />
+                </div>
+                <div className="slide-content slide-content-light">
+                    <h1>Our Fave Tees</h1>
+                    <p>Shop all of our favorites.</p>
+                    <button>Shop Now</button>
+                </div>
+            </div>
+        );
+    }
+
+    _renderSlide3(item) {
+        return (
+            <div className="slide">
+                <div className="slide-image">
+                    <img src={slide3} alt="slide3" />
+                </div>
+                <div className="slide-content slide-content-light">
+                    <h1>Men's Tees</h1>
+                    <p>Find the perfect shirt.</p>
+                    <button>Shop Now</button>
+                </div>
+            </div>
+        );
+    }
+
+
+    render() {
+        return (
+            <ImageGallery
+                ref={i => this._imageGallery = i}
+                items={this.slides}
+                infinite={this.state.infinite}
+                showBullets={this.state.showBullets}
+                showFullscreenButton={this.state.showFullscreenButton}
+                showPlayButton={this.state.showPlayButton}
+                showThumbnails={this.state.showThumbnails}
+                showIndex={this.state.showIndex}
+                showNav={this.state.showNav}
+                isRTL={this.state.isRTL}
+                thumbnailPosition={this.state.thumbnailPosition}
+                slideDuration={this.state.slideDuration}
+                slideInterval={this.state.slideInterval}
+                slideOnThumbnailOver={this.state.slideOnThumbnailOver}
+                useWindowKeyDown={this.state.useWindowKeyDown}
+            />
+        );
+    };
+};
